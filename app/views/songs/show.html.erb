@@ -1,0 +1,9 @@
+<h1><%= @song.name %></h1>
+
+
+<% @chart.songs.each do |song| %>
+  <h4><%= song.title %></h4>
+<% end %>
+
+<%= link_to 'Edit Song', edit_song_path%>
+<%= link_to 'Delete Song', song_path(@song), method: :delete%>

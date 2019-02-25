@@ -1,0 +1,9 @@
+<h1><%= @chart.name %></h1>
+
+
+<% @chart.songs.each do |song| %>
+  <h4><%= song.title %></h4>
+<% end %>
+
+<%= link_to 'Edit Billboard', edit_chart_path%>
+<%= link_to 'Delete Billboard', chart_path(@chart), method: :delete%>
